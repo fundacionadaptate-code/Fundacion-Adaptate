@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donar | Fundación Adáptate</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Montserrat',sans-serif;
+  background:#ffffff;
+  color:#0c3344;
+  overflow-x:hidden;
+}
+
+:root{
+  --primary:#00384D;
+  --secondary:#00C8F5;
+  --light:#F4FAFC;
+  --dark:#001C27;
+}
+
+/* HEADER */
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:20px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:999;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:800;
+  font-size:1.15rem;
+  color:var(--primary);
+  text-decoration:none;
+}
+
+.logo img{
+  height:44px;
+}
+
+nav a{
+  margin-left:26px;
+  text-decoration:none;
+  color:var(--primary);
+  font-weight:600;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--secondary);
+}
+
+.btn-donar{
+  margin-left: 28px;
+  padding: 12px 22px;
+  background: var(--secondary);
+  color: white !important;
+  border-radius: 30px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.btn-donar:hover{
+  background: var(--primary);
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+/* HERO */
+.hero{
+  padding:170px 8% 90px;
+  text-align:center;
+  background:linear-gradient(135deg,#ffffff 30%,#eafcff 100%);
+}
+
+.hero h1{
+  font-size:3.8rem;
+  margin-bottom:20px;
+  color:var(--primary);
+}
+
+.hero h1 span{
+  color:var(--secondary);
+}
+
+.hero p{
+  max-width:760px;
+  margin:auto;
+  line-height:1.9;
+  font-size:1.15rem;
+}
+
+/* SECTION */
+section{
+  padding:60px 8% 90px;
+}
+
+.section-title{
+  font-size:2.4rem;
+  margin-bottom:18px;
+  color:var(--primary);
+  text-align:center;
+}
+
+.section-sub{
+  max-width:760px;
+  line-height:1.8;
+  font-size:1.05rem;
+  margin:0 auto 45px;
+  text-align:center;
+}
+
+/* DONATION CARDS CONTAINER */
+.donation-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.donation-card {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.06);
+  border: 1px solid #edf6f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donation-card h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--secondary);
+  padding-bottom: 10px;
+}
+
+.bank-details {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 15px;
+}
+
+.bank-details p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #334;
+  margin-bottom: 8px;
+}
+
+.bank-details p strong {
+  color: var(--primary);
+}
+
+.donation-card p.info-text {
+  line-height: 1.8;
+  color: #566;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.btn-action {
+  display: inline-block;
+  padding: 16px 34px;
+  border-radius: 40px;
+  background: var(--secondary);
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+  transition: .3s;
+  margin-top: 20px;
+}
+
+.btn-action:hover {
+  background: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0,200,245,.25);
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  background:#00151d;
+  color:white;
+}
+
+/* MOBILE */
+@media(max-width:980px){
+  .hero h1{
+    font-size:2.8rem;
+  }
+  nav{
+    display:none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<a href="index.html" class="logo">
+  <img src="logo.png" alt="Logo Fundación Adáptate">
+</a>
+<nav id="mainNav">
+  <a href="index.html">Inicio</a>
+  <a href="quienes-somos.html">Nosotros</a>
+  <a href="programas.html">Programas</a>
+  <a href="contacto.html">Contacto</a>
+  <a href="donar.html" class="btn-donar">Dona Aquí</a> 
+</nav>
+</header>
+
+<section class="hero">
+<h1>Apoya nuestra <span>Misión</span></h1>
+<p>
+  Tu aporte nos permite seguir financiando implementaciones, becas de entrenamiento y traslados para que más niños, jóvenes y adultos accedan al golf adaptado de forma gratuita.
+</p>
+</section>
+
+<section>
+  <h2 class="section-title">Formas de Aportar</h2>
+  <p class="section-sub">Elige la opción que te resulte más cómoda para realizar tu donación voluntaria.</p>
+
+  <div class="donation-container">
+    
+    <div class="donation-card">
+      <div>
+        <h3>Transferencia Bancaria</h3>
+        <p class="info-text">Puedes realizar un aporte directo de forma segura utilizando los datos de nuestra cuenta institucional:</p>
+        
+        <div class="bank-details">
+          <p><strong>Titular:</strong> Fundación Adáptate</p>
+          <p><strong>Rut:</strong> 65.XXX.XXX-X (Reemplazar)</p>
+          <p><strong>Banco:</strong> Nombre del Banco (Reemplazar)</p>
+          <p><strong>Tipo de Cuenta:</strong> Corriente</p>
+          <p><strong>N° de Cuenta:</strong> XXXXXXXX (Reemplazar)</p>
+          <p><strong>Correo:</strong> contacto@fundacionadaptate.cl</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="donation-card">
+      <div>
+        <h3>Aporte en Línea</h3>
+        <p class="info-text">Si prefieres donar de manera inmediata utilizando tarjetas de crédito, débito o prepago a través de plataformas digitales integradas:</p>
+        <p class="info-text" style="font-size: 0.9rem; font-style: italic;">Haz clic en el siguiente botón para ser redirigido a nuestro portal de pago seguro.</p>
+      </div>
+      <a href="#" class="btn-action">Donar con Webpay</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+© 2026 Fundación Adáptate | Inclusión a través del golf
+</footer>
+
+</body>
+</html>
